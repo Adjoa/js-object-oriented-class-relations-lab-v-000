@@ -48,8 +48,8 @@ let tripId = 0
 class Trip {
   constructor(driver, passenger) {
     this.id = ++tripId
-    // this.driver = driver
-    // this.passenger = passenger
+    this.driver = driver
+    this.passenger = passenger
 
     if (driver) {
         this.driverId = driver.id
@@ -62,15 +62,15 @@ class Trip {
     store.trips.push(this)
   }
 
-  passenger(){
-    return store.passengers.find(function(passenger){
-      return passenger.id === this.passengerId
-    })
-  }
-
-  driver(){
-    return store.drivers.find(function(driver) {
-      return driver.id === this.driverId
-    })
-  }
+  // passenger(){
+  //   return store.passengers.find(function(passenger){
+  //     return passenger.id === this.passengerId
+  //   })
+  // }
+  // 
+  // driver(){
+  //   return store.drivers.find(function(driver) {
+  //     return driver.id === this.driverId
+  //   })
+  // }
 }
