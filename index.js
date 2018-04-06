@@ -16,15 +16,13 @@ class Driver {
   }
 
   passengers(){
-    let trips = store.trips.filter(trip => {
-      return trip.driverId === this.id
-    })
+    trips()
+  }
   //
   //   return trips.reduce(function(passengers, trip){
   //     return trip.passengerId  if trip.driverId === this.id
   //   }, [])
-  }
-
+  
 // function totalRevenue(drivers) {
  //   return drivers.reduce(function(total, driver){
  //     return total + driver.revenue
