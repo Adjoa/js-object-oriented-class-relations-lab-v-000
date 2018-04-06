@@ -16,38 +16,22 @@ class Driver {
   }
 
   passengers(){
+    let trips = store.trips.filter(trip => {
+      return trip.driverId === this.id
+    })
 
-
-    // return trips
-
-    // let passengerIds = trips.forEach(function(trip){
-    //   return trip.passengerId
-    // })
-
+    let passengerIds = trips.forEach(function(trip){
+      return trip.passengerId
+    })
+    
     let passengers = store.passengers.filter(passenger => {
-
-      let trips = store.trips.filter(trip => {
-        return trip.driverId === this.id
-      })
-
-      trips.forEach(function(trip){
-        return trip.passengerId
-      }).forEach(function(){
+      passengerIds.forEach(function(){
         return passengerId === passenger.id
       })
     })
-    // return passengers
-  }
-  //
-  //   return trips.reduce(function(passengers, trip){
-  //     return trip.passengerId  if trip.driverId === this.id
-  //   }, [])
 
-// function totalRevenue(drivers) {
- //   return drivers.reduce(function(total, driver){
- //     return total + driver.revenue
- //   }, 0)
- // }
+    return passengers
+  }
 }
 
 let passengerId = 0
