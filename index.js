@@ -26,15 +26,29 @@ class Trip {
     this.id = ++tripId
     this.driver = driver
     this.passenger = passenger
-    
+
     if (driver) {
-        this.driverId = this.driver.id
+        this.driverId = driver.id
     }
 
     if (passenger) {
-      this.passengerId = this.passenger.id
+      this.passengerId = passenger.id
     }
-    
+
     store.trips.push(this)
   }
+
+  driver() {
+    return store.drivers.find(function(driver) {
+      return driver.id === this.driverId
+    })
+  }
+
+  passenger() {
+    return store.passengers.find(function(passenger) {
+      return passenger.id === this.passengerId
+    })
+  }
+
+  
 }
