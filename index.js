@@ -15,11 +15,29 @@ class Driver {
     })
   }
 
-  passengers(){
-    return store.passengers.filter(passenger => {
-      return passenger.driverId === this.id
-    })
+  // get all this driver's trips
+  // get all the passenger ids from those trips
+  // return all those passengers
+  // passengerId_store = this.trips().passengerId.filter
+
+
+  passengerIds(this.trips) {
+    return trips.reduce(function(passengerIds, trip){
+      return passengerIds.push(trip.passengerId)
+    }, [])
   }
+  
+  // function totalRevenue(drivers) {
+  //   return drivers.reduce(function(total, driver){
+  //     return total + driver.revenue
+  //   }, 0)
+  // }
+
+  // passengers(){
+  //   return store.trip.filter(trip => {
+  //     if (trip.driverId === this.id){ return trip.passengerId } 
+  //   })
+  // }
 }
 
 let passengerId = 0
@@ -37,11 +55,11 @@ class Passenger {
     })
   }
 
-  drivers(){
-    return store.drivers.filter(driver => {
-      return driver.passengerId === this.id
-    })
-  }
+  // drivers(){
+  //   return store.drivers.filter(driver => {
+  //     return driver.passengerId === this.id
+  //   })
+  // }
 }
 
 let tripId = 0
