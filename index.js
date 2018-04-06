@@ -18,7 +18,7 @@ class Driver {
   passengers(){
     let mytrips = this.trips()
     return mytrips.map(function(trip) {
-      return trip.passenger 
+      return trip.passenger() 
     })
   }
   // passengers(){
