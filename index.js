@@ -16,7 +16,7 @@ class Driver {
   }
 
   passengers(){
-    this.trips()
+    return this.trips()
   }
 
 // function totalRevenue(drivers) {
