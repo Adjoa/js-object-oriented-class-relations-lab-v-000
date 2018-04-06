@@ -15,7 +15,7 @@ class Driver {
     })
   }
 
-  passengers(){
+  passengers => {
     this.trips()
   }
   //
