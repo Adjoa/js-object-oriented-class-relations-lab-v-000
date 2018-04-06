@@ -15,15 +15,15 @@ class Driver {
     })
   }
 
-  // passengers(){
-  //   trips = store.trips.filter(trip => {
-  //     return trip.driverId === this.id
-  //   })
-  // 
+  passengers(){
+    trips = store.trips.filter(trip => {
+      return trip.driverId === this.id
+    })
+  //
   //   return trips.reduce(function(passengers, trip){
   //     return trip.passengerId  if trip.driverId === this.id
   //   }, [])
-  // }
+  }
 
 // function totalRevenue(drivers) {
  //   return drivers.reduce(function(total, driver){
