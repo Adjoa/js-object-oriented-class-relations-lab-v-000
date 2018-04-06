@@ -16,18 +16,24 @@ class Driver {
   }
 
   passengers(){
-    // get all the driver's trips
     let mytrips = this.trips()
-    // get all the passengers from the driver's trips
-    let agg = []
-    for(let i= 0; i < mytrips.length; i++ ){
-      let passenger = mytrips[i].passenger()
-      agg.push(passenger)
-    }
-
-    // return them .map
-    return agg
+    return mytrips.map(function(trip) {
+      return trip.passenger 
+    })
   }
+  // passengers(){
+  //   // get all the driver's trips
+  //   let mytrips = this.trips()
+  //   // get all the passengers from the driver's trips
+  //   let agg = []
+  //   for(let i= 0; i < mytrips.length; i++ ){
+  //     let passenger = mytrips[i].passenger()
+  //     agg.push(passenger)
+  //   }
+  // 
+  //   // return them .map
+  //   return agg
+  // }
 }
 
 let passengerId = 0
