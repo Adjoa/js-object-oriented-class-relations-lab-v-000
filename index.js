@@ -22,11 +22,15 @@ class Driver {
 
     // return trips
 
-    let passengerIds = trips.forEach(function(trip){
-      return trip.passengerId
-    })
+    // let passengerIds = trips.forEach(function(trip){
+    //   return trip.passengerId
+    // })
 
     let passengers = store.passengers.filter(passenger => {
+      let passengerIds = trips.forEach(function(trip){
+        return trip.passengerId
+      })
+      
       passengerIds.forEach(function(){
         return passengerId === passenger.id
       })
