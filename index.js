@@ -16,11 +16,11 @@ class Driver {
   }
 
   passengers(){
-    // let mytrips = this.trips()
     return this.trips().map(function(trip) {
       return trip.passenger()
     })
   }
+  
   // passengers(){
   //   // get all the driver's trips
   //   let mytrips = this.trips()
@@ -52,18 +52,23 @@ class Passenger {
   }
 
   drivers(){
-    // get all the passenger's trips
-    let mytrips = this.trips()
-    // get all the drivers from the passenger's trips
-    let agg = []
-    for(let i= 0; i < mytrips.length; i++ ){
-      let driver = mytrips[i].driver()
-      agg.push(driver)
-    }
-
-    // return them .map
-    return agg
+    return this.trips().map(function(trip) {
+      return trip.driver()
+    })
   }
+  // drivers(){
+  //   // get all the passenger's trips
+  //   let mytrips = this.trips()
+  //   // get all the drivers from the passenger's trips
+  //   let agg = []
+  //   for(let i= 0; i < mytrips.length; i++ ){
+  //     let driver = mytrips[i].driver()
+  //     agg.push(driver)
+  //   }
+  // 
+  //   // return them .map
+  //   return agg
+  // }
 }
 
 let tripId = 0
