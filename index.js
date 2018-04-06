@@ -5,7 +5,7 @@ class Driver {
   constructor(name) {
       this.id = ++driverId
       this.name = name
-   
+
       store.drivers.push(this)
   }
 
@@ -20,7 +20,19 @@ class Driver {
       return trip.driverId === this.id
     })
 
-    return trips
+    // return trips
+
+    let passengerIds = trips.forEach(function(trip){
+      return trip.passengerId
+    })
+
+    let passengers = store.passengers.filter(passenger => {
+      passengerIds.forEach(function(){
+        return passengerId === passenger.id
+      })
+    })
+
+    // return passengers
   }
   //
   //   return trips.reduce(function(passengers, trip){
