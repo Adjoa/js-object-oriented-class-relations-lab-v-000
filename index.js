@@ -5,7 +5,7 @@ class Driver {
   constructor(name) {
       this.id = ++driverId
       this.name = name
-
+   
       store.drivers.push(this)
   }
 
@@ -15,7 +15,13 @@ class Driver {
     })
   }
 
-  
+  passengers(){
+    let trips = store.trips.filter(trip => {
+      return trip.driverId === this.id
+    })
+
+    return trips
+  }
   //
   //   return trips.reduce(function(passengers, trip){
   //     return trip.passengerId  if trip.driverId === this.id
