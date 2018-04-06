@@ -15,9 +15,7 @@ class Driver {
     })
   }
 
-  const passengers = (passenger => {
-    this.trips()
-  })
+  
   //
   //   return trips.reduce(function(passengers, trip){
   //     return trip.passengerId  if trip.driverId === this.id
