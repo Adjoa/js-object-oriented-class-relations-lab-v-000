@@ -21,7 +21,7 @@ class Driver {
     // get all the passengers from the driver's trips
     let agg = []
     for(let i= 0; i < mytrips.length; i++ ){
-      passenger = mytrips[i].passenger()
+      let passenger = mytrips[i].passenger()
       agg.push(passenger)
     }
 
