@@ -17,8 +17,8 @@ class Driver {
 
   passengers(){
     // let mytrips = this.trips()
-    return this.trips.map(function(trip) {
-      return trip.passenger() 
+    return this.trips().map(function(trip) {
+      return trip.passenger()
     })
   }
   // passengers(){
@@ -30,7 +30,7 @@ class Driver {
   //     let passenger = mytrips[i].passenger()
   //     agg.push(passenger)
   //   }
-  // 
+  //
   //   // return them .map
   //   return agg
   // }
