@@ -16,13 +16,13 @@ class Driver {
   }
 
   passengers(){
-    trips()
+    this.trips()
   }
   //
   //   return trips.reduce(function(passengers, trip){
   //     return trip.passengerId  if trip.driverId === this.id
   //   }, [])
-  
+
 // function totalRevenue(drivers) {
  //   return drivers.reduce(function(total, driver){
  //     return total + driver.revenue
