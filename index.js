@@ -14,6 +14,16 @@ class Driver {
       return trip.driverId === this.id
     })
   }
+
+  passengers(){
+    trips()
+  }
+
+// function totalRevenue(drivers) {
+ //   return drivers.reduce(function(total, driver){
+ //     return total + driver.revenue
+ //   }, 0)
+ // }
 }
 
 let passengerId = 0
