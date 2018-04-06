@@ -25,7 +25,7 @@ class Driver {
       agg.push(passenger)
     }
 
-    // return them
+    // return them .map
     return agg
   }
 }
@@ -43,6 +43,20 @@ class Passenger {
     return store.trips.filter(trip => {
       return trip.passengerId === this.id
     })
+  }
+
+  drivers(){
+    // get all the passenger's trips
+    let mytrips = this.trips()
+    // get all the drivers from the passenger's trips
+    let agg = []
+    for(let i= 0; i < mytrips.length; i++ ){
+      let driver = mytrips[i].driver()
+      agg.push(driver)
+    }
+
+    // return them .map
+    return agg
   }
 }
 
